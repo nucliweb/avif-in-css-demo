@@ -3,6 +3,7 @@ const postcssImport     = require('postcss-import')
 const postcsseasings    = require('postcss-easings')
 const importUrl         = require('postcss-import-url')
 const cssnano           = require('cssnano')
+const avifInCSS         = require('avif-in-css')
 
 const dev = {
   plugins: [
@@ -10,6 +11,7 @@ const dev = {
     postcssImport({
       path: 'app/css',
     }),
+    avifInCSS(),
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,
@@ -26,6 +28,7 @@ const prod = {
     postcssImport({
       path: 'app/css',
     }),
+    avifInCSS(),
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,

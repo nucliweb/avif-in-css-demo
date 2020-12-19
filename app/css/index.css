@@ -20,6 +20,9 @@ https://easings.net
   --surface: lch(10 0 0);
   --text: lch(80 0 0);
   --brand: lch(64 40 347);
+  --block-size: 90%;
+  --c-accent: #9f7aea;
+  --c-secondary: #3C9DF0;
 
   @media (prefers-color-scheme: light) {
     --surface: lch(98 0 0);
@@ -51,26 +54,30 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-@media (orientation: landscape) {
-  body {
-    grid-auto-flow: column;
-  }
-}
-
 body,p,ul,dl,dd,dt,figure,
 h1,h2,h3,h4,h5,h6,small {
   margin: 0;
 }
 
+body {
+  padding: 1ch;
+}
+
 a {
-  color: color(display-p3 0 .5 1);
+  background-color: var(--c-accent);
+  border-radius: .28ch;
+  color: white;
+  display: inline-block;
+  padding: 0 .5ch;
 
   &:visited {
-    color: color(display-p3 .5 0 1);
+    background-color: var(--c-secondary);
+    color: white;
   }
 }
 
 h1,h2,h3,h4,h5,h6 {
+  color: white;
   line-height: 1.5;
   max-inline-size: 25ch;
 }
@@ -84,4 +91,12 @@ p {
 
 ::selection {
   background-color: var(--brand);
+}
+
+.Lions {
+  background-size: cover;
+  background-image: url("./images/lions.jpg");
+  border: 1px dashed black;
+  height: 300px;
+  max-width: 500px;
 }
