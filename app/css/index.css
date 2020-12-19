@@ -1,43 +1,21 @@
-/* 
-(bundle from remote urls) 
-@import '//css-from-url';
-
-(bundle from npm)
-@import 'css-from-npm';
-
-(bundle from local)
-@import 'localfile.css' 
-
-(PresetENV)
-CSS powers @ https://preset-env.cssdb.org/features
-
-(Easings)
-only imports what you use 
-https://easings.net
-*/
-
 :root {
   --surface: lch(10 0 0);
   --text: lch(80 0 0);
   --brand: lch(64 40 347);
-  --block-size: 90%;
   --c-accent: #9f7aea;
   --c-secondary: #3C9DF0;
 
-  @media (prefers-color-scheme: light) {
-    --surface: lch(98 0 0);
-    --text: lch(30 0 0);
-    --brand: lch(65 64 350);
 
-    @media (dynamic-range: high) {
-      --brand: color(display-p3 1 0 1);
-    }
-  }
 }
 
 html {
   block-size: 100%;
   inline-size: 100%;
+}
+
+body,p,ul,dl,dd,dt,figure,
+h1,h2,h3,h4,h5,h6,small {
+  margin: 0;
 }
 
 body {
@@ -52,14 +30,6 @@ body {
   background: var(--surface);
   color: var(--text);
   font-family: system-ui, sans-serif;
-}
-
-body,p,ul,dl,dd,dt,figure,
-h1,h2,h3,h4,h5,h6,small {
-  margin: 0;
-}
-
-body {
   padding: 1ch;
 }
 
@@ -99,4 +69,20 @@ p {
   border: 1px dashed black;
   height: 300px;
   max-width: 500px;
+}
+
+.Twitter,
+.Twitter:visited {
+  background-color: white;
+  border-radius: .28ch;
+  color: rgb(70, 70, 70);
+  display: inline-block;
+  font-weight: bold;
+  padding: .5ch;
+  text-decoration: none;
+}
+
+.Footer {
+  max-width: 500px;
+  text-align: right;
 }
